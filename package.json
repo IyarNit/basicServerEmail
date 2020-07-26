@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preInitialization": "cd ../server/ && npm i concurrently",
+    "initialize": "concurrently \"npm run addExpress\" \"npm run addDotEnv\" \"npm run addBodyParser\" \"npm run addCors\"",
+    "addExpress": "cd ../server/ && npm i express",
+    "addDotEnv": "cd ../server/ && npm i dotenv",
+    "addBodyParser": "cd ../server/ && npm i body-parser",
+    "addCors": "cd ../server/ && npm i cors",
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.7",
+    "nodemailer": "^6.4.10"
+  }
+}
